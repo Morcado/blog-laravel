@@ -23,7 +23,7 @@ Route::get('/users/{id}/{name}', function ($id, $name) {
 
 Route::get('/hello', function () {
     // return "<h1>hello world</h1>";7
-    return [ 
+    return [
         'hello' => 'world',
         'name' => 'Oscar',
 
