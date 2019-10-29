@@ -1,8 +1,6 @@
 @extends('layot.app')
 
 @section('title', 'servicios')
-    
-@endsection
 
 @section('content')
     
@@ -14,5 +12,14 @@
 
 
 <p>Servicio con id = {{$idVista}} and costo = {{$costoVista}} </p>
+
+@if (count($services) > 0) 
+    <h2>Nuestros servicios</h2>
+    <ul class="list-group">
+        @foreach ($services as $item)
+            <li class="list-group-item">{{$item}}</li>
+        @endforeach
+    </ul>
+@endif
 
 @endsection

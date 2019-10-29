@@ -16,7 +16,7 @@ class PagesController extends Controller {
     public function services() {
         $id = request('id');
         $costo = request('costo');
-
+        $datas = ['Web designo', 'programacion', 'CEO', 'Mercado'];
         // $params = Array(
         //     'id' => $id,
         //     'costo' => $costo
@@ -25,7 +25,8 @@ class PagesController extends Controller {
         // Recibir parametros de la pagina, y mandarlos a la vista
         return view('pages/services', [
             'idVista' => $id,
-            'costoVista' => $costo
+            'costoVista' => $costo,
+            'services' => $datas
         ]);
     }
 }
